@@ -26,7 +26,17 @@ export default {
           datasets: [
             {
               label: ["Team"],
-              backgroundColor: ["yellow", "green", "red", "blue", "grey", "pink", "purple", "orange", "yellow"],
+              backgroundColor: [
+                "yellow",
+                "green",
+                "red",
+                "blue",
+                "grey",
+                "pink",
+                "purple",
+                "orange",
+                "yellow"
+              ],
               pointBackgroundColor: "white",
               borderWidth: 1,
               pointBorderColor: "#249EBF",
@@ -86,7 +96,7 @@ export default {
               {
                 ticks: {
                   beginAtZero: true,
-                   display: false
+                  display: false
                 },
                 gridLines: {
                   display: false
@@ -97,7 +107,7 @@ export default {
               {
                 ticks: {
                   beginAtZero: true,
-                   display: false
+                  display: false
                 },
                 gridLines: {
                   display: false
@@ -108,7 +118,7 @@ export default {
           legend: {
             display: false
           },
-      
+
           responsive: true,
           maintainAspectRatio: false,
           height: 200,

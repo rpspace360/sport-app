@@ -1,19 +1,18 @@
 <template>
   <div id="app">
-    <MainLayout msg="Welcome to Your Vue.js App"/>
+    <MainLayout msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
 <script>
-import MainLayout from './components/MainLayout.vue'
-
+import MainLayout from "./components/MainLayout.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     MainLayout
   }
-}
+};
 </script>
 
 <style>

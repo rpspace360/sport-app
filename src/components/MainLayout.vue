@@ -24,93 +24,88 @@
     <a-layout :style="{ marginLeft: '200px' }">
       <a-layout-header :style="{ background: '#fff', padding: 0 }" />
       <a-layout-content :style="{ margin: '24px 16px 0', overflow: 'initial' }">
-         <a-row id="stackedChart">
-        <div :style="{ padding: '24px', background: '#fff', textAlign: 'center' }">
-         <StackedChart />
-          <a-table :columns="columns" :dataSource="data" :scroll="{ x: 1300 }">
- 
-  </a-table>
-        </div>
-         </a-row >
-         <a-row id="verticalBarChart" :style="{ padding: '24px', background: '#fff', textAlign: 'center' }"> <VerticalBar :styles="{height: '400px'}" /> </a-row>
-         <a-row id="lineChart" :style="{ padding: '24px', background: '#fff', textAlign: 'center' }">
+        <a-row id="stackedChart">
+          <div :style="{ padding: '24px', background: '#fff', textAlign: 'center' }">
+            <StackedChart />
+            <a-table :columns="columns" :dataSource="data" :scroll="{ x: 1300 }"></a-table>
+          </div>
+        </a-row>
+        <a-row
+          id="verticalBarChart"
+          :style="{ padding: '24px', background: '#fff', textAlign: 'center' }"
+        >
+          <VerticalBar :styles="{height: '400px'}" />
+        </a-row>
+        <a-row id="lineChart" :style="{ padding: '24px', background: '#fff', textAlign: 'center' }">
           <LineChart :styles="{height: '300px'}" />
         </a-row>
-        <a-row id="bubbleChart" :style="{ padding: '24px', background: '#fff', textAlign: 'center' }" :gutter="16">
+        <a-row
+          id="bubbleChart"
+          :style="{ padding: '24px', background: '#fff', textAlign: 'center' }"
+          :gutter="16"
+        >
           <a-col class="gutter-row" :span="6">
             <a-card hoverable style="width: 300px">
-    <img
-      alt="example"
-      src="../assets/tanny.svg"
-      slot="cover"
-    />
-   
-    <a-card-meta title="Tammy Abraham" description="England">
-      <a-avatar
-        slot="avatar"
-        src="../assets/tanny.svg"
-      />
-    </a-card-meta>
-  </a-card>
-          </a-col >
-           <a-col class="gutter-row" :span="18">
-          <BubbleChart :styles="{height: '300px'}" />
-           </a-col>
+              <img alt="example" src="../assets/tanny.svg" slot="cover" />
+
+              <a-card-meta title="Tammy Abraham" description="England">
+                <a-avatar slot="avatar" src="../assets/tanny.svg" />
+              </a-card-meta>
+            </a-card>
+          </a-col>
+          <a-col class="gutter-row" :span="18">
+            <BubbleChart :styles="{height: '300px'}" />
+          </a-col>
         </a-row>
-       
       </a-layout-content>
-      <a-layout-footer :style="{ textAlign: 'center' }">
-        Sport Demo App
-      </a-layout-footer>
+      <a-layout-footer :style="{ textAlign: 'center' }">Sport Demo App</a-layout-footer>
     </a-layout>
   </a-layout>
 </template>
 <script>
-import StackedChart from './StackedColumnChart.vue'
-import VerticalBar from './VerticalBar.vue'
-import LineChart from './LineChart.vue'
-import BubbleChart from './BubbleChart.vue'
+import StackedChart from "./StackedColumnChart.vue";
+import VerticalBar from "./VerticalBar.vue";
+import LineChart from "./LineChart.vue";
+import BubbleChart from "./BubbleChart.vue";
 
 const columns = [
- 
-  { title: '', dataIndex: 'name', key: '1' },
-  { title: 'Facebook', dataIndex: 'amount', key: '2' },
-  { title: 'Instagram', dataIndex: 'amount', key: '3' },
-  { title: 'Twitter', dataIndex: 'amount', key: '4' },
-  { title: 'Youtube', dataIndex: 'amount', key: '5' },
-  { title: 'Linkedin', dataIndex: 'amount', key: '6' },
-  { title: 'Snapchat', dataIndex: 'amount', key: '7' },
-  { title: 'Average', dataIndex: 'amount', key: '8' },
-    { title: 'Total', dataIndex: 'amount', key: '9' },
-
+  { title: "", dataIndex: "name", key: "1" },
+  { title: "Facebook", dataIndex: "amount", key: "2" },
+  { title: "Instagram", dataIndex: "amount", key: "3" },
+  { title: "Twitter", dataIndex: "amount", key: "4" },
+  { title: "Youtube", dataIndex: "amount", key: "5" },
+  { title: "Linkedin", dataIndex: "amount", key: "6" },
+  { title: "Snapchat", dataIndex: "amount", key: "7" },
+  { title: "Average", dataIndex: "amount", key: "8" },
+  { title: "Total", dataIndex: "amount", key: "9" }
 ];
 
 const data = [
   {
-    key: '1',
-    name: 'Text',
+    key: "1",
+    name: "Text",
     amount: "$12,453,75",
-    address: 'New York Park',
+    address: "New York Park"
   },
   {
-    key: '2',
-    name: 'Photo',
+    key: "2",
+    name: "Photo",
     amount: "$12,453,75",
-    address: 'London Park',
-  },
-   {
-    key: '3',
-    name: 'Video',
-      amount: "$12,453,75",
-    address: 'New York Park',
+    address: "London Park"
   },
   {
-    key: '4',
-    name: 'Total',
+    key: "3",
+    name: "Video",
+    amount: "$12,453,75",
+    address: "New York Park"
+  },
+  {
+    key: "4",
+    name: "Total",
     amount: "$12,453,75",
     age: 40,
-    address: 'London Park',
-  },
+    address: "London Park"
+  }
 ];
 export default {
   name: "MainLayout",
@@ -120,14 +115,12 @@ export default {
     LineChart,
     BubbleChart
   },
-   data() {
+  data() {
     return {
       data,
-      columns,
-      
+      columns
     };
-  },
-
+  }
 };
 </script>
 <style>

@@ -1,10 +1,6 @@
 <template>
   <div>
-    <GChart
-      type="ColumnChart"
-      :data="chartData"
-      :options="chartOptions"
-    />    
+    <GChart type="ColumnChart" :data="chartData" :options="chartOptions" />
   </div>
 </template>
 
